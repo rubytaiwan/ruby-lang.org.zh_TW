@@ -1,0 +1,66 @@
+Here you will find pointers to manuals, tutorials and references that will come in handy when you feel like coding in Ruby.
+
+h3. Getting Started
+
+<dl>
+<dt>"Learn to Program":http://pine.fm/LearnToProgram/</dt>
+<dd>A wonderful little tutorial by Chris Pine for programming newbies. If you don't know how to program, start here.</dd>
+
+<dt>"Ruby in Twenty Minutes":/en/documentation/quickstart/</dt>
+<dd>A nice tutorial covering the basics of Ruby. From start to finish it shouldn't take you more than twenty minutes.</dd>
+
+<dt>"Ruby from Other Languages":/en/documentation/ruby-from-other-languages/</dt>
+<dd>Coming to Ruby from another language? Whether it's C, C++, Java, Perl, PHP, or Python, this article has you covered!</dd>
+
+<dt>"Learning Ruby":http://rubylearning.com/</dt>
+<dd>A thorough collection of Ruby study notes for those who are new to the language and in search of a solid introduction to Ruby's concepts and constructs.</dd>
+
+<dt>"Ruby Essentials":http://www.techotopia.com/index.php/Ruby_Essentials</dt>
+<dd>Ruby Essentials is a free on-line book designed to provide a concise and easy to follow guide to learning Ruby.</dd>
+
+<dt>"Ruby &amp; Ruby on Rails programming tutorials":http://www.meshplex.org/wiki/Ruby/Ruby_on_Rails_programming_tutorials</dt>
+<dd>A site that aims to provide well-organized, rich content tutorials for both Ruby and Rails.</dd>
+</dl>
+
+
+h3. Manuals
+
+<dl>
+<dt>"Programming Ruby":http://www.ruby-doc.org/docs/ProgrammingRuby/</dt>
+<dd>The seminal work on Ruby in English, this first edition of the "Pragmatic Programmers' book":http://pragmaticprogrammer.com/titles/ruby/index.html is available for free online.</dd>
+
+<dt>"Ruby User's Guide":http://www.rubyist.net/~slagell/ruby/</dt>
+<dd>Translated from the original Japanese version written by Yukihiro Matsumoto (the creator of Ruby), this version, by Goto Kentaro and Mark Slagell is nice overview of many aspects of the Ruby language.</dd>
+
+<dt>"The Ruby Programming Wikibook":http://en.wikibooks.org/wiki/Ruby_programming_language</dt>
+<dd>A free online manual with beginner and intermediate content plus a thorough language reference.</dd>
+</dl>
+
+h3. Reference Documentation
+
+<dl>
+<dt>"Ruby Core Reference":http://www.ruby-doc.org/core</dt>
+<dd>Pulled straight from the source code using "RDoc":http://rdoc.sourceforge.net, this reference work documents all of the core classes and modules (like String, Array, Symbol, etc...).</dd>
+
+<dt>"Ruby Standard Library Reference":http://www.ruby-doc.org/stdlib</dt>
+<dd>Also pulled from the source code using RDoc, this reference work documents the standard library.</dd>
+
+<dt>"Ruby C API Reference":http://www.ruby-doc.org/doxygen/current/</dt>
+<dd>Documentation for Ruby's underlying C code. Great if you want to write C extensions or contribute to Ruby's development.</dd>
+
+<dt>"YARD Live Documentation Server":http://yardoc.org/docs</dt>
+<dd>Documentation for your favourite Ruby libraries.</dd>
+
+<dt>"rdoc.info":http://rdoc.info/</dt>
+<dd>Your source for open source Ruby documentation.</dd>
+
+<dt>"Rails Searchable API Doc":http://railsapi.com/</dt>
+<dd>Rails and Ruby documentation with smart searching.</dd>
+
+<dt>"RubyDox":http://www.rubydox.net/</dt>
+<dd>Ruby, Rails, Gem and Plugin Documentation.</dd>
+</dl>
+
+h3. Further Reading
+
+"Ruby-Doc.org":http://ruby-doc.org maintains a comprehensive list of English documentation sources. There are also plenty of "books about Ruby":http://www.ruby-doc.org/bookstore. If you have questions about Ruby the "mailing list":/en/community/mailing-lists/ is a great place to start.

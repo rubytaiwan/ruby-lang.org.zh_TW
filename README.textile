@@ -1,0 +1,12 @@
+h1. "ruby-lang.org/zh_TW":http://ruby-lang.org/zh_TW
+
+The original content is from "http://ruby-lang.org":http://ruby-lang.org (using "Rediant CMS":http://radiantcms.org/)
+
+h2. USAGE
+
+type "ruby generate.rb" will generate HTML to /output
+
+h2. zh-TW site maintainers
+
+* SJH
+* ihower

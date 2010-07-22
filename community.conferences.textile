@@ -1,0 +1,31 @@
+Ruby programmers around the world are getting involved in more and more conferences, where they get together to share reports on work-in-progress, discuss the future of Ruby, and welcome newcomers to the Ruby community.
+
+h3. Major Ruby Conferences
+
+<dl>
+<dt>"RubyConf":http://rubyconf.org/</dt>
+<dd>Every year since 2001, "Ruby Central, Inc.":http://www.rubycentral.org has produced RubyConf, the International Ruby conference. Attendance grew by a factor of ten between 2001 and 2006.  RubyConf has provided a forum for presentations about Ruby technologies by their creators, including talks by Nathaniel Talbot on Test Unit, Jim Weirich on Rake, David Heinemeier Hansson on Ruby on Rails, Why the Lucky Stiff on the YAML library, and Sasada Koichi on YARV. Matz has attended, and spoken
+at, all the RubyConfs but one.</dd>
+
+<dt>"RubyKaigi":http://jp.rubyist.net/RubyKaigi2008/</dt>
+<dd>The first Japanese Ruby conference, RubyKaigi 2006, took place in Odaiba. RubyKaigi provides many new and exciting talks by Matz and other Rubyists in every year.</dd>
+
+<dt>"EuRuKo <small>(Europaeische Ruby Konferenz)</small>":http://www.approximity.com/cgi-bin/europeRuby/tiki.cgi?c=v&p=Euruko07</dt>
+<dd>The first annual European Ruby Conference (EuRuKo) was held in Karlsruhe, Germany, in 2003.  Organized by a team of German Rubyists including Armin Roehrl and Michael Neumann, EuRuKo emerged as the second annual Ruby event, starting two years after RubyConf.</dd>
+
+<dt>"Open Source Developer Conference":http://www.osdc.com.au/</dt>
+<dd>This is an annual open source development conference that is held each year in Australia. While not specifically a Ruby conference, each year we do get a number of Ruby papers and we are always interested in more Ruby content.</dd>
+</dl>
+
+h3. Regional Ruby Conferences
+
+"Ruby Central":http://www.rubycentral.org administers a "Regional Conference Grant Program":http://www.rubycentral.org/rcg2006.pdf, to offset expenses for local and regional groups wanting to organize events.</p>
+
+Ruby Central has also teamed up with "SDForum":http://www.sdforum.org to produce the Silicon Valley
+Ruby Conference, entering its second year in 2007.
+
+"RubyNation":http://rubynation.org/ is an annual Ruby conference serving the Virginia, West Virginia, Maryland, and Washington, DC areas.
+
+h3. Ruby At Other Conferences
+
+There has been a Ruby track at the "O'Reilly Open Source Conference":http://conferences.oreillynet.com/os2006/ (OSCON) since 2004, and an increasing presence on the part of Ruby and Rubyists at other non-Ruby-specific gatherings.  A number of conferences have also been devoted to "Ruby on Rails":http://www.rubyonrails.org, including Ruby Central's "RailsConf":http://www.railsconf.org, "RailsConf Europe":http://europe.railsconf.org (co-produced in 2006 by Ruby Central and "Skills Matter":http://www.skillsmatter.com, and in 2007 by Ruby Central and O'Reilly), and Canada on Rails.

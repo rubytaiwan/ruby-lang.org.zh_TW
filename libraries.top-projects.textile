@@ -1,0 +1,24 @@
+<p><em>This is a list of the 30 most downloaded Ruby projects (according to <a href="http://rubyforge.org">RubyForge</a>).</em></p>
+
+<r:top_projects src="http://rubyforge.org/export/top_downloads.php">
+<table id="top-projects-table" border="0" cellspacing="0" cellpadding="0">
+<thead>
+<tr>
+<th class="rank">Rank</th>
+<th class="project">Project</th>
+<th class="downloads">Downloads</th>
+</tr>
+</thead>
+<tbody>
+<r:each limit="30">
+<tr>
+<td class="rank"><r:rank /></td>
+<td class="project"><h4><r:link /></h4><p><r:description /></p></td>
+<td class="downloads"><r:downloads /></td>
+</tr>
+</r:each>
+</tbody>
+</table>
+</r:top_projects>
+
+<p><a href="http://rubyforge.org/top/toplist.php?type=downloads">View the full list of the top 100 downloads at RubyForge&#8230;</a></p>
