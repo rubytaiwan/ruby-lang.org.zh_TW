@@ -1,0 +1,66 @@
+這裡是可以派上用場的入門教學、學習手冊和參考文件：
+
+h3. 入門
+
+<dl>
+<dt>"Learn to Program":http://pine.fm/LearnToProgram/</dt>
+<dd>由 Chris Pine 撰寫的程式語言入門。適合完全沒有程式設計經驗的朋友。</dd>
+
+<dt>"Ruby in Twenty Minutes":/en/documentation/quickstart/</dt>
+<dd>一份不錯的 Ruby 基礎教學，從開始到結束應該不花你二十分鐘。</dd>
+
+<dt>"Ruby from Other Languages":/en/documentation/ruby-from-other-languages/</dt>
+<dd>已經熟悉其他程式語言? 不論是 C, C++, Java, Perl, PHP 或 Python 這裡都有介紹。</dd>
+
+<dt>"Learning Ruby":http://rubylearning.com/</dt>
+<dd>收集了許多 Ruby 上手經驗談，以及各種 Ruby 介紹。</dd>
+
+<dt>"Ruby Essentials":http://www.techotopia.com/index.php/Ruby_Essentials</dt>
+<dd>免費的線上電子書，讓你可以一步步地學習 Ruby。</dd>
+
+<dt>"Ruby &amp; Ruby on Rails programming tutorials":http://www.meshplex.org/wiki/Ruby/Ruby_on_Rails_programming_tutorials</dt>
+<dd>提供豐富內容的 Ruby 和 Rails 教學網站。</dd>
+</dl>
+
+h3. 學習手冊
+
+<dl>
+<dt>"Programming Ruby":http://www.ruby-doc.org/docs/ProgrammingRuby/</dt>
+<dd>這是 Ruby 的第一本英文書，第一版開放線上免費閱讀 "Pragmatic Programmers' book":http://pragmaticprogrammer.com/titles/ruby/index.html 。</dd>
+
+<dt>"Ruby 使用手冊-中文版":http://guides.ruby.tw/ruby/</dt>
+<dd>原日文版出自 Yukihiro Matsumoto (Ruby 發明人)，英文版為 Goto Kentaro 和 Mark Slagell 翻譯，繁體中文版則由 "Ruby Taiwan":http://ruby.tw 翻譯。這是一個不錯的 Ruby 導覽。</dd>
+
+<dt>"The Ruby Programming Wikibook":http://en.wikibooks.org/wiki/Ruby_programming_language</dt>
+<dd>給初學者到中階程度的線上手冊以及語言參考。</dd>
+</dl>
+
+h3. 參考文件
+
+<dl>
+<dt>"Ruby Core Reference":http://www.ruby-doc.org/core</dt>
+<dd>這是原始碼中的 "RDoc":http://rdoc.sourceforge.net 文件，包括所有的核心類別和模組(例如 String, Array, Symbol, 等...).</dd>
+
+<dt>"Ruby Standard Library Reference":http://www.ruby-doc.org/stdlib</dt>
+<dd>Ruby 的標準函式庫文件，也是原始碼中的 RDoc 文件。</dd>
+
+<dt>"Ruby C API Reference":http://www.ruby-doc.org/doxygen/current/</dt>
+<dd>Ruby 底層的 C 語言文件。適合給需要撰寫 C extensions 或參與 Ruby 核心開發的朋友。</dd>
+
+<dt>"YARD Live Documentation Server":http://yardoc.org/docs</dt>
+<dd>常用的 Ruby 函式庫文件。</dd>
+
+<dt>"rdoc.info":http://rdoc.info/</dt>
+<dd>一些 Ruby 開放原始碼專案的文件。</dd>
+
+<dt>"Rails Searchable API Doc":http://railsapi.com/</dt>
+<dd>提供 Ruby 和 Rails 文件搜尋。</dd>
+
+<dt>"RubyDox":http://www.rubydox.net/</dt>
+<dd>Ruby、Rails、Gem 和 Plugin 的文件。</dd>
+</dl>
+
+h3. 進階閱讀
+
+"Ruby-Doc.org":http://ruby-doc.org 整理了一份廣泛的英文文件列表，也有許多 "Ruby 書籍":http://www.ruby-doc.org/bookstore 。中文文件列表請參考 "Ruby Taiwan 文件":http://guides.ruby.tw 。如果您有 Ruby 相關的問題， "郵件論壇":/en/community/mailing-lists/ 是個不錯的發問地方。
+
