@@ -4,7 +4,7 @@ h3. Ruby 原始碼
 
 如果您非常熟悉您的作業系統，或是您需要特別設定的環境，那麼直接使用原始碼來安裝是個不錯的方式。如果您的平台沒有編譯好的套件，那麼也必須透過原始碼來安裝。
 
-* "Ruby 1.9.1-p378":ftp://ftp.ruby-lang.org:21//pub/ruby/1.9/ruby-1.9.1-p378.tar.gz (md5:&nbsp; 9fc5941bda150ac0a33b299e1e53654c) Stable Version (_recommended_)
+* "Ruby 1.9.1-p429":ftp://ftp.ruby-lang.org:21//pub/ruby/1.9/ruby-1.9.1-p429.tar.gz (md5:&nbsp; 9fc5941bda150ac0a33b299e1e53654c) 穩定版本 (_推薦_)
 * "Stable Snapshot":ftp://ftp.ruby-lang.org:21//pub/ruby/ruby-1.9-stable.tar.gz 這是 SVN 中最新的穩定版本，它應該比上一個穩定版本更好。
 * "Nightly Snapshot":ftp://ftp.ruby-lang.org/pub/ruby/snapshot.tar.gz 這是 SVN 中最新的開發版本，它也許包含了一些已知尚未解決的問題。
 

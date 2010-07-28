@@ -4,7 +4,7 @@ h3. Ruby Source Code
 
 Installing from the source code is a great solution for when you are comfortable enough with your platform and perhaps need specific settings for your environment. It's also a good solution in the event that there are no other premade packages for your platform.
 
-* "Ruby 1.9.1-p378":ftp://ftp.ruby-lang.org:21//pub/ruby/1.9/ruby-1.9.1-p378.tar.gz (md5:&nbsp; 9fc5941bda150ac0a33b299e1e53654c) Stable Version (_recommended_)
+* "Ruby 1.9.1-p429":ftp://ftp.ruby-lang.org:21//pub/ruby/1.9/ruby-1.9.1-p429.tar.gz (md5:&nbsp; 9fc5941bda150ac0a33b299e1e53654c) Stable Version (_recommended_)
 * "Stable Snapshot":ftp://ftp.ruby-lang.org:21//pub/ruby/ruby-1.9-stable.tar.gz This is tar'ed and gzip'ed file of the latest stable SVN. It should be better than the last stable release.
 * "Nightly Snapshot":ftp://ftp.ruby-lang.org/pub/ruby/snapshot.tar.gz This is tar'ed and gzip'ed file of the latest SVN. It may contain unfixed problems.
 
