@@ -1,6 +1,6 @@
 h2. 簡介
 
-這是一個簡短的 Ruby 入門導覽，應該可以在二十分鐘內完成。您必須先安裝好 Ruby (如果還沒有，請先 "下載":/zh_TW/downloads/ 安裝)
+這是一個簡短的 Ruby 入門導覽，應該可以在二十分鐘內完成。您必須先安裝好 Ruby (如果還沒有，請先"下載":/zh_TW/downloads/安裝)
 
 h2. 互動式 Ruby
 
@@ -60,36 +60,24 @@ irb(main):005:0> 3**2
 => 9
 </r:code></notextile>
 
-In Ruby @**@  is the way you say  "to the power of".  But  what if you
-want to go the other way and find the square root of something?
+在 Ruby 中 @**@ 是 "次方" 的意思。但是如果你想開根號呢?
 
 <notextile><r:code>
 irb(main):006:0> Math.sqrt(9)
 => 3.0
 </r:code></notextile>
 
-Ok, wait, what was that last  one?  If you guessed, "it was figuring out
-the square  root of nine," you're  right.  But let's take  a closer
-look at things.  First of all, what's @Math@?
+等一下，上面那是什麼? 如果你想說："它是 9 的平方根" 那就對了。讓我們來仔細看一下。首先，什麼是 @Math@?
 
-h2. Modules, Group Code by Topic
+h2. 給程式分類的模組(Modules)
 
-@Math@ is a built-in module for mathematics.  Modules  serve two  roles in
-Ruby.  This shows one role: grouping similar methods together under a familiar
-name.   @Math@ also  contains  methods like  @sin()@ and @tan()@.
+@Math@ 是一個內建的數學模組。Ruby 的模組有兩種作用。這裡介紹的是第一種：把功能相似的函式放在一起。@Math@ 模組還包括了像是 @sin()@ 和 @tan()@。
 
-Next is a dot.  What does the dot do?  The dot is how  you identify the
-receiver  of  a message.  What's  the message?   In this  case  it's
-@sqrt(9)@, which  means call the method @sqrt@, shorthand for "square
-root" with the parameter of @9@.
+接下來介紹點(dot)。這個點是做什麼用的? 這個點是用來告訴接收者(即 Math 模組)一個訊息。什麼訊息呢? 在這個例子，訊息是 @sqrt(9)@，也就是呼叫 @sqet@ 函式，並傳遞 9 作為參數。sqrt 正是 "square root" 平方根的意思。
 
-The result of  this method call is the value  @3.0@.  You might notice
-it's not just @3@.  That's because most of the time the square root of
-a  number  won't  be  an  integer,  so the  method  always  returns  a
-floating-point number.
+這個函式的回傳值是 @3.0@。你可能會發現到這不只是 @3@ 而已，還包括小數點。這是因為大多數的情況開根號不會剛好是整數，所以這個函數總是回傳浮點數。
 
-What if we  want to remember the result of some  of this math?  Assign
-the result to a variable.
+如果我們想記住運算的結果呢? 指定到一個變數即可。
 
 <notextile><r:code>
 irb(main):007:0> a = 3 ** 2
@@ -99,5 +87,4 @@ irb(main):008:0> b = 4 ** 2
 irb(main):009:0> Math.sqrt(a+b) => 5.0
 </r:code></notextile>
 
-As great as this is for a calculator, we’re getting away from the traditional
-@Hello World@ message that beginning tutorials are supposed to focus on… "so let’s go back to that.":2/
+儘管這是一個不錯的計算機，但我們將逐漸脫離基本的 @Hello World@，"讓我們繼續吧":2/。
