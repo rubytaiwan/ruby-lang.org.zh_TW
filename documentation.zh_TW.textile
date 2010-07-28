@@ -6,10 +6,10 @@ h3. 入門
 <dt>"Learn to Program":http://pine.fm/LearnToProgram/</dt>
 <dd>由 Chris Pine 撰寫的程式語言入門。適合完全沒有程式設計經驗的朋友。</dd>
 
-<dt>"Ruby in Twenty Minutes":/en/documentation/quickstart/</dt>
+<dt>"二十分鐘 Ruby 入門":/zh_TW/documentation/quickstart/</dt>
 <dd>一份不錯的 Ruby 基礎教學，從開始到結束應該不花你二十分鐘。</dd>
 
-<dt>"Ruby from Other Languages":/en/documentation/ruby-from-other-languages/</dt>
+<dt>"從其他語言到 Ruby":/zh_TW/documentation/ruby-from-other-languages/</dt>
 <dd>已經熟悉其他程式語言? 不論是 C, C++, Java, Perl, PHP 或 Python 這裡都有介紹。</dd>
 
 <dt>"Learning Ruby":http://rubylearning.com/</dt>
