@@ -1,6 +1,6 @@
-當你第一眼看見 Ruby 程式碼，你一定會想起你熟悉的其他程式語言。這正是本文件的目的。Ruby 有許多語法和 Perl、Python 和 Java (以及其他程式語言) 類似，所以如果你已經熟悉這些程式語言，學習 Ruby 易如反掌。
+當你第一眼看見 Ruby 程式碼，你一定會想起你熟悉的程式語言。這正是本文件的目的。Ruby 有許多語法和 Perl、Python 和 Java (以及其他程式語言) 類似，所以如果你已經熟悉這些程式語言，那麼學習 Ruby 易如反掌。
 
-這份文件包括兩大部份。這一部分的用意是整理從 _X_ 語言到 Ruby 的重點。第二部分則從 Ruby 的重要功能及特色著手，與其他你已經熟悉的程式語言來做比較。
+這份文件包括兩大部份。這一部分的用意是整理從 _X_ 語言到 Ruby 的重點。第二部分則從 Ruby 的重要功能及特色著手，與其他程式語言來做比較。
 
 h2. 重點整理: 從 _程式語言 X_ 到 Ruby
 <r:children:each by="title">
@@ -12,26 +12,20 @@ h2. 重要的語言特色及一些訣竅
 
 h3. 迭代 (Iteration)
 
-Two Ruby features that are a bit unlike what you may have seen before,
-and which take some getting used to, are "blocks" and iterators. Instead
-of looping over an index (like with C, C++, or pre-1.5 Java),
-or looping over a list (like Perl's <tt>for (@a) {...}</tt>, or Python's
-<tt>for i in aList: ...</tt>), with Ruby you'll very often instead see
+Ruby 有兩個常用的特色你可能沒見過，那就是 "程式區塊(blocks)" 和迭代子(iterators"。不像使用索引的迴圈(例如 C, C++ 和 pre-1.5 Java)，或是迴圈控制結構(例如 Perl 的 <tt>for (@a) {...}</tt>，或是 Python 的 <tt>for i in aList: ...</tt>)。在 Ruby 裡你會常常看到：
 
 <notextile><r:code>
 some_list.each do |this_item|
-  # We're inside the block.
-  # deal with this_item.
+  # 我們在程式區塊中
+  # 處理 this_item
 end
 </r:code></notextile>
 
-For more info on @each@ (and it's friends @collect@, @find@, @inject@, @sort@, etc.),
-see @ri Enumerable@ (and then <tt>ri Enumerable#<i>func_name</i></tt>).
+關於更多 @each@ 的資訊 (以及 @collect@, @find@, @inject@, @sort@ 等等)，請參考 @ri Enumerable@ (和 <tt>ri Enumerable#<i>func_name</i></tt>).
 
-h3. 所有東西都有值 (Everything has a value)
+h3. 一切東西都有值
   
-There's no difference between an expression and a statement. Everything has a value,
-even if that value is *nil*. This is possible:
+表達式(expression)和敘述(statement)沒有差別，都會有回傳值，即使那個值是 *nil*。例如下述用法：
 
 <notextile><r:code>
 x = 10
@@ -44,13 +38,11 @@ end
 z # => true
 </r:code></notextile>
 
-h3. Symbols 不是輕量的 Strings
+h3. Symbols 不是輕量化的字串
 
-Many Ruby newbies struggle with understanding what Symbols are, and what they can
-be used for.
-  
-Symbols can best be described as identities. A symbol is all about *who* it is,
-not *what* it is. Fire up <code>irb</code> and see the difference:
+許多 Ruby 新手會搞不清楚什麼是 Symbols(符號) 可以做什麼用。
+
+Symbols 就如同一個識別符號。一個 symbol 就代表它是"誰"了，而不是代表它是"什麼"。打開 <code>irb</code> 來看一看它們的區別：
   
 <notextile><r:code>
 irb(main):001:0> :george.object_id == :george.object_id
@@ -60,30 +52,20 @@ irb(main):002:0> "george".object_id == "george".object_id
 irb(main):003:0>
 </r:code></notextile>
   
-The <code>object_id</code> methods returns the identity of an Object. If two
-objects have the same <code>object_id</code>, they are the same (point to the
-same Object in memory).
-  
-As you can see, once you have used a Symbol once, any Symbol with the same
-characters references the same Object in memory. For any given two Symbols that
-represent the same characters, the <code>object_id</code>s match.
-  
-Now take a look at the String ("george"). The <code>object_id</code>s don't
-match. That means they're referencing two different objects in memory.
-Whenever you use a new String, Ruby allocates memory for it.
-  
-If you're in doubt whether to use a Symbol or a String, consider what's more
-important: the identity of an object (i.e. a Hash key), or the contents (in
-the example above, "george").
+<code>object_id</code> 函式會回傳物件的識別編號。如果有兩個物件有相同的  <code>object_id</code> 表示它們其實是同一個(指向同一個記憶體位置)。
 
+如你所見，使用過 Symbols 之後，任何相同名字的 Symbol 都是指記憶體裡的同一個物件。對任何相同名字的 Symbols，它們的 <code>object_id</code> 都一樣。
 
-h3. 所有東西都是物件 (Everything is an Object)
+讓我們來看看字串 "george"，它們的 <code>object_id</code> 並不相同。這表示它們在記憶體裡面是不同的物件。每次你建立一個新的字串，Ruby 就會分配新的記憶體空間給它。
 
-"Everything is an object" isn't just hyperbole. Even classes and integers are
-objects, and you can do the same things with them as with any other object:
+如果你不清楚何時使用 Symbol 何時用字串(String)，想想看用途究竟是物件的識別(例如一個雜湊 Hash 的 key)，還是物件內容(比如這個例子的 "george")。
+  
+h3. 所有東西都是物件
+
+"所有東西都是物件" 並不是誇大，甚至是類別跟整數也是物件，你可以與其他物件一樣操作它們：
 
 <notextile><r:code>
-# This is the same as
+# 這是等價的程式：
 # class MyClass
 #   attr_accessor :instance_var
 # end
@@ -92,24 +74,17 @@ MyClass = Class.new do
 end
 </r:code></notextile>
 
+譯著：任何類別都是 <code>Class</code> 類別所產生(new)出來的物件。
 
-h3. 可變的常數 (Variable Constants)
+h3. 可變的常數
 
-Constants are not really constant. If you modify an already initialized constant,
-it will trigger a warning, but not halt your program. That isn't to say you
-*should* redefine constants, though.
+常數(Constant)並不真的無法改變。如果你修改了一個已經有值的常數，你會得到一個警告訊息，但程式不會終止。當然這不表示你"應該"修改常數的值。
 
+h3. 命名慣例
 
+Ruby 規定了一些命名慣例。變數的識別名稱，大寫字母開頭的是常數、錢號($)開頭的是全域變數、<code>@</code> 開頭是實例變數(instance variable)、<code>@@</code> 開頭則是類別變數。
 
-h3. 命名慣例 (Naming conventions)
-
-Ruby enforces some naming conventions. If an identifier starts with a capital letter,
-it is a constant. If it starts with a dollar sign ($), it is a global variable. If
-it starts with <code>@</code>, it is an instance variable. If it starts with <code>@@</code>,
-it is a class variable.
-
-Method names, however, are allowed to start with capital letters. This can lead to
-confusion, as the example below shows:
+函式名稱可以允許大寫字母開頭，雖然可能造成一些混淆，例如：
 
 <notextile><r:code>
 Constant = 10
@@ -118,14 +93,11 @@ def Constant
 end
 </r:code></notextile>
   
-Now <code>Constant</code> is 10, but <code>Constant()</code> is 11.
+這裡的 <code>Constant</code> 是 10，但是 <code>Constant()</code> 卻是 11。
 
+h3. 虛擬關鍵字參數
 
-
-h3. 假關鍵字參數 (Fake keyword parameters)
-
-Ruby doesn't have keyword parameters, like Python has. However, it can be faked by
-using symbols and hashes. Ruby on Rails, among others, uses this heavily. Example:
+Ruby 不像 Python 有關鍵字參數(keyword parameters)功能，但是可以用 symbols 和雜湊(hash) 來替代。Ruby on Rails 和非常多的函式庫都使用了這個方法，例如：
   
 <notextile><r:code>
 def some_keyword_params( params )
@@ -135,12 +107,9 @@ some_keyword_params( :param_one => 10, :param_two => 42 )
 # => {:param_one=>10, :param_two=>42}
 </r:code></notextile>
   
-h3. 通則 (The universal truth)
+h3. 一切為 true
 
-In Ruby, everything except *nil* and *false* is considered true. In C, Python and
-many other languages, 0 and possibly other values, such as empty lists, are consided
-false. Take a look at the following Python code (the example applies to other languages,
-too):
+在 Ruby 裡，除了 *nil* 和 *false* 之外的所有東西，都可以當做 true 值。在 C, Python 和其他語言中，0 和一些其他值，例如空列表，會被當做 false。例如我們看看以下的 Python 程式(其他語言亦同)：
   
 <notextile><r:code>
 # in Python
@@ -150,7 +119,7 @@ else:
   print "0 is false"
 </r:code></notextile>
   
-This will print "0 is false". The equivalent Ruby:
+這會輸出 "0 is false"。而在 Ruby 裡:
   
 <notextile><r:code>
 # in Ruby
@@ -161,13 +130,11 @@ else
 end
 </r:code></notextile>
   
-Prints "0 is true".
+這會輸出 "0 is true"。
 
+h3. 存取修飾詞會作用到底
 
-
-h3. 存取修飾詞會作用到作用域結束 (Access modifiers apply until the end of scope)
-
-In the following Ruby code,
+在下面的 Ruby 程式中，
   
 <notextile><r:code>
 class MyClass
@@ -177,48 +144,36 @@ class MyClass
 end
 </r:code></notextile>
   
-You might expect <code>another_method</code> to be public. Not so. The 'private' access
-modifier continues until the end of the scope, or until another access modifier
-pops up, whichever comes first. By default, methods are public:
-  
+你可能會認為 <code>another_method</code> 是 public 的，但不是這樣。這個 'private' 存取修飾到作用域(scope)結束，或是直到另一個存取修飾詞開始作用。函式預設都是 public 的：
+
 <notextile><r:code>
 class MyClass
-  # Now a_method is public
+  # 這個 a_method 是 public 的
   def a_method; true; end
 
   private
 
-  # another_method is private
+  # 這個 another_method 是 private 的
   def another_method; false; end
 end
 </r:code></notextile>
   
-<code>public</code>, <code>private</code> and <code>protected</code> are really methods,
-so they can take parameters. If you pass a Symbol to one of them, that method's visibility
-is altered.
+<code>public</code>, <code>private</code> 和 <code>protected</code> 其實也是一種函式，所以可以接受參數。如果你傳入一個 Symbol，那個該 Symbol 代表的函式就會改變存取權限。
 
-
-
-h3. 函式存取 (Method access)
+h3. 函式存取權限
   
-<p>In Java, <code>public</code> means a method is accessible by anyone. <code>protected</code>
-means the class's instances, instances of descendant classes, and instances of classes in the same package
-can access it, but not anyone else, and <code>private</code> means nobody besides the classes instances 
-can access the method.</p>
+在 Java 裡，<code>public</code> 表示函式可以被任何人呼叫。<code>protected</code> 表示只有這個類別的實例、衍生類別的實例，以及相同 package 類別的實例可以呼叫，而 <code>private</code> 表示除了這個類別的實例之外，除了都不行呼叫。
 
-Ruby differs slightly. <code>public</code> is, naturally, public. <code>private</code> means
-the method(s) are accessible only when they can be called without an explicit receiver. Only *self* is
-allowed to be the receiver of a private method call.
+Ruby 有一點不同，<code>public</code> 還是一樣是公開的意思。而 <code>private</code> 表示只有不指定接受者(receiver)時才可以呼叫。所以一個 private 函式的接受者一定是預設的 *self*。
 
-<code>protected</code> is the one to be on the lookout for. A protected method can be called
-from a class or descendant class instances, but also with another instance as its receiver.
-
-Example, adapted from the "Ruby FAQ":http://faq.rubygarden.org/entry/show/57?controller_prefix=faq%2F:
+<code>protected</code> 要特別注意。一個 protected 函式除了可以被一個類別或衍生類別的實例呼叫，也可以讓另一個相同類別的實例來當做接受者。
+ 
+來看看 "Ruby FAQ":http://faq.rubygarden.org/entry/show/57?controller_prefix=faq%2F 的例子：
 
 <notextile><r:code>
 $ irb
 irb(main):001:0> class Test
-irb(main):002:1>   # public by default
+irb(main):002:1>   # 預設是 public 的
 irb(main):003:1*   def func
 irb(main):004:2>     99
 irb(main):005:2>   end
@@ -235,15 +190,15 @@ irb(main):013:0> t2 = Test.new
 => #<Test:0x342784>
 irb(main):014:0> t1 == t2
 => true
-irb(main):015:0> # now make `func` protected, still works
-irb(main):016:0* # because protected allows the other reference
+irb(main):015:0> # 來讓 `func` 變成 protected，一樣沒問題
+irb(main):016:0* # 因為 protected 允許其他相同類別的實例呼叫
 irb(main):017:0* class Test
 irb(main):018:1>   protected :func
 irb(main):019:1> end
 => Test
 irb(main):020:0> t1 == t2
 => true
-irb(main):021:0> # now make `func` private
+irb(main):021:0> # 來讓 `func` 變成 private
 irb(main):022:0* class Test
 irb(main):023:1>   private :func
 irb(main):024:1> end
@@ -256,49 +211,32 @@ NoMethodError: private method `func' called for #<Test:0x342784>
 irb(main):026:0>
 </r:code></notextile>
 
-
-
-h3. 類別是開放的 (Classes are open)
+h3. 類別是開放的
   
-Ruby classes are open. You can open them up, add to them, and change them
-at any time. Even core classes, like <code>Fixnum</code> or even
-<code>Object</code>, the parent of all objects. Ruby on Rails defines a
-bunch of methods for dealing with time on <code>Fixnum</code>. Watch:
+Ruby 的類別是開放的，你可以隨時打開它新增一點程式或是修改。即使是核心類別如 <code>Fixnum</code> 或是 <code>Object</code>(這是所有類別的父類別) 都一樣。 Ruby on Rails 甚至定義了一堆時間函式到 <code>Fixnum</code> 去，例如：
  
 <notextile><r:code>
 class Fixnum
   def hours
-    self * 3600 # number of seconds in an hour
+    self * 3600 # 一小時有多少秒
   end
   alias hour hours
 end
   
-# 14 hours from 00:00 January 1st
-# (aka when you finally wake up ;)
+# 從一月一號 00:00 往後數 14 個小時
+# (你終於醒了吧 ;)
 Time.mktime(2006, 01, 01) + 14.hours # => Sun Jan 01 14:00:00
 </r:code></notextile>
 
+h3. 有趣的函式名稱
 
-
-h3. 有趣的函式名稱 (Funny method names)
-
-In Ruby, methods are allowed to end with question marks or exclamation marks.
-By convention, methods that answer questions (i.e. <tt>Array#empty?</tt>
-returns *true* if the receiver is empty) end in question marks. Potentially
-"dangerous" methods (ie methods that modify *self* or the arguments,
-<code>exit!</code> etc.) by convention end with exclamation marks.
+在 Ruby 裡，函式名稱允許用問號或驚嘆號結尾。慣例上，用來回答是非題的函式會用問號結尾 (例如 <tt>Array#empty?</tt> 會回傳 *true* 如果函式接收者是空的)。有潛在 "危險" (表示有某種副作用，會修改 *self* 或參數值。例如 <code>exit!</code> 等) 的函式會用驚嘆號結尾。
   
-All methods that change their arguments don't end with exclamation marks,
-though. <tt>Array#replace</tt> replaces the contents of an array with the contents
-of another array. It doesn't make much sense to have a method like that
-that *doesn't* modify self.
+但是這不表示所有會修改參數的函式一定有驚嘆號結尾，例如 <tt>Array#replace</tt> 就會替換內容成別的陣列，畢竟 replace 的意思就是要修改替換自己。
 
+h3. 單件函式
 
-
-h3. 單件函式 (Singleton methods)
-
-Singleton methods are per-object methods. They are only available on the
-Object you defined it on.
+單件函式(Singleton methods)是個別物件才有的函式。它們只存在於你要定義的物件之中。
   
 <notextile><r:code>
 class Car
@@ -315,23 +253,19 @@ end
 
 porsche.inspect # => Expensive car
 
-# Other objects are not affected
+# 其他物件就不受影響
 other_car = Car.new
 other_car.inspect # => Cheap car
 </r:code></notextile>
 
 
-h3. Missing 函式 (Missing methods)
+h3. Missing 函式
 
-Ruby doesn't give up if it can't find a method that responds to a particular
-message. It calls the <code>method_missing</code> method with the name of the method
-it couldn't find and the arguments. By default, method_missing raises a
-NameError exception, but you can redefine it to better fit your application,
-and many libraries do. Here is an example:
+當你呼叫一個不存在的函式，Ruby 仍然有辦法處理。它會改呼叫 <code>method_missing</code> 這個函式，並把這個不存在的函式名稱傳進去當做參數。method_missing 預設會丟出一個 NameError 例外，但是你可以根據你的需求重新定義過，也有許多函式庫這麼做。這是一個例子：
  
 <notextile><r:code>
-# id is the name of the method called, the * syntax collects
-# all the arguments in an array named 'arguments'
+# id 是被呼叫函式的名字，而 * 符號會收集
+# 所有傳進來的參數變成一個叫做 'arguments' 的陣列
 def method_missing( id, *arguments )
   puts "Method #{id} was called, but not found. It has " + 
        "these arguments: #{arguments.join(", ")}"
@@ -342,79 +276,68 @@ __ :a, :b, 10
 # arguments: a, b, 10
 </r:code></notextile>
 
-The code above just prints the details of the call, but you are free to handle the message in any way that is appropriate.
+以上程式會輸出呼叫的細節，但是你隨意定義過這個訊息。
 
+h3. 傳遞訊息，不是呼叫函數
 
-
-h3. 訊息傳遞，不是函數呼叫 (Message passing, not function calls)
-
-A method call is really a *message* to another object:
+一個函式呼叫(method call)其實就是一個 *訊息(message)* 送給一個物件：
 
 <notextile><r:code>
-# This
+# 這個
 1 + 2
-# Is the same as this ...
+# 等同於 ...
 1.+(2)
-# Which is the same as this:
+# 也等同於:
 1.send "+", 2
 </r:code></notextile>
 
-h3. Blocks are Objects, they just don't know it yet
+h3. Blocks 也算是物件
 
-Blocks (closures, really) are heavily used by the standard library. To call a
-block, you can either use @yield@, or make it a @Proc@ by appending a special
-argument to the argument list, like so:
+程式區塊 Blocks (或叫做 closures) 被廣泛應用在標準函式庫。要執行一個程式區塊，可以用  @yield@ ，或是透過一個特別的參數讓它變成 @Proc@，例如：
 
 <notextile><r:code>
 def block( &the_block )
-  # Inside here, the_block is the block passed to the method
+  # 在這裡面，the_block 是被傳進來的程式區塊
   the_block # return the block
 end
 adder = block { |a, b| a + b }
-# adder is now a Proc object
+# adder 是一個 Proc 物件
 adder.class # => Proc
 </r:code></notextile>
-  
-You can create blocks outside of method calls, too, by calling Proc.new with
-a block or calling the <code>lambda</code> method.
-  
-Similarly, methods are also Objects in the making:
+
+你也可以透過 Proc.new 或 lambda 在函式外建立程式區塊。
+
+同樣的，函式也可以當做物件：
 
 <notextile><r:code>
 method(:puts).call "puts is an object!"
 # => puts is an object!
 </r:code></notextile>
 
-h3. 操作子只是語法糖 (Operators are syntactic sugar)
+h3. 操作符只是語法包裝
 
-Most operators in Ruby are just syntactic sugar (with some precedence rules) for method calls. You can, for example, override Fixnums + method:
+大部分的 Ruby 操作符(operators)只是一種函式呼叫的語法包裝(syntactic sugar)，加上一些優先權規則。你要的話，舉例來說，我們可以覆寫掉 Fixnum 的 + 函式：
   
 <notextile><r:code>
 class Fixnum
-  # You can, but please don't do this
+  # 可以這麼做，但請不要這麼改
   def +( other )
     self - other
   end
 end
 </r:code></notextile>
   
-You don't need C++'s <code>operator+</code>, etc.
-  
-You can even have array-style access if you define the <code>[]</code> and <code>[]=</code>
-methods. To define the unary + and - (think +1 and -2), you must define the
-<code>+@</code> and <code>-@</code> methods, respectively.
-  
-The operators below are *not* syntactic sugar, though. They are not methods, 
-and cannot be redefined:
+你不需要 C++ 的 <code>operator+</code> 等。
+
+甚至有如陣列存取的 <code>[]</code> 和 <code>[]=</code> 可以定義。要定義一元的 + and - (想想看 +1 跟 -2)，你必須分別定義 <code>+@</code> 和 <code>-@</code> 函式。
+
+以下的操作符則*不是*語法包裝。它們不是函式，不能被覆寫定義：
 
 <notextile><r:code lang="symbols">  
 =, .., ..., !, not, &&, and, ||, or, !=, !~, ::
 </r:code></notextile>
 
-In addition, +=, *= etc. are just abbrevations for
-<code>var = var + other_var</code>, <code>var = var * other_var</code>, etc. and therefore
-cannot be redefined.
-
+此外 +=, *= 等只是 <code>var = var + other_var</code> 跟 <code>var = var * other_var</code> 等的縮寫，因此也不能被覆寫定義。
 
 h2. 更多資料
 
