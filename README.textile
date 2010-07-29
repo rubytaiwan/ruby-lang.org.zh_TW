@@ -6,7 +6,7 @@ h2. USAGE
 
 type "ruby generate.rb" will generate HTML to /output
 
-h2. zh-TW site maintainers
+h2. zh_TW site maintainers
 
 * SJH
 * ihower
