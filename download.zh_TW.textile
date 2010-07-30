@@ -86,3 +86,17 @@ h3. Solaris 和 OpenSolaris 上的 Ruby
 其他的 OpenSolaris 發佈版本如 "Solaris Express Community Edition 或 SXCE":http://opensolaris.org/os/downloads 則預設安裝了 Ruby 1.8.7。關於版本位置等都和 vanilla OpenSolaris 發佈版本相同，請參考上述的 ARC case。
 
 要手動安裝 SVR4 套件，請參考 "RubyOpenSolaris project @ Rubyforge":http://rubyforge.org/projects/rubyopensolaris 。
+
+h3. 其他 Ruby 環境
+
+除了上述由 C 語言實作的官方版 Ruby (又叫做 CRuby 或 MRI, Matz's Ruby Interpreter)，也有其他不同實作的 Ruby 環境。這些實作都以 "RubySpec":http://github.com/rubyspec/rubyspec 作為其語法的標準：
+
+"JRuby":http://jruby.org/ 是由 "Java":http://www.java.com/zh_TW/ 實作的 Ruby，運行在高效能、支援系統執行緒及有非常多函數庫的 Java 虛擬機器(JVM)上。
+
+"IronRuby":http://ironruby.net/ 是由 ".NET":http://www.microsoft.com/NET/ 實作的 Ruby，使用了 "Dynamic Language Runtime.":http://codeplex.com/dlr 技術。
+
+"MacRuby":http://www.macruby.org/ 是由 "Objective-C":http://developer.apple.com/mac/library/documentation/Cocoa/Conceptual/ObjectiveC/Introduction/introObjectiveC.html 實作的 Ruby，直接運作在 Mac OS X 作業系統上。它使用了 "LLVM":http://llvm.org/ 編譯器技術。
+
+"Ruby Enterprise Edition":http://www.rubyenterpriseedition.com/ (簡稱REE) 是個非常流行的 CRuby 分支版本，適合用來搭配 "Ruby on Rails":http://rubyonrails.org.tw 和 "Phusion Passenger":http://www.modrails.com/ 使用。
+
+其他有趣的 Ruby 實作還包括 "Rubinuis":http://rubini.us/ 和 "MagLev":http://ruby.gemstone.com/ 。
