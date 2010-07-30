@@ -8,7 +8,7 @@ Ruby與PHP一樣的地方...
 * Ruby有類別，也有 @public@, @private@, 與 @protected@ 方法，就像PHP 5一樣。
 * Some variables start with $, like in PHP (but not all)
 * 有些變數以$號開頭(但不是所有變數)
-* 也有 @eval@。
+* 也有 @eval@ 。
 * 有字串「插值」。不過不是用 "$foo is a $bar" ，而是"#{foo} is a #{bar}"
  -- 跟PHP一樣，用單引號包住的字串不適用。
 * 也Heredocs。
