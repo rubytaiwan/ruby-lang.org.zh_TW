@@ -12,7 +12,7 @@ h2. 重要的語言特色及一些訣竅
 
 h3. 迭代 (Iteration)
 
-Ruby 有兩個常用的特色你可能沒見過，那就是 "程式區塊(blocks)" 和迭代子(iterators"。不像使用索引的迴圈(例如 C, C++ 和 pre-1.5 Java)，或是迴圈控制結構(例如 Perl 的 <tt>for (@a) {...}</tt>，或是 Python 的 <tt>for i in aList: ...</tt>)。在 Ruby 裡你會常常看到：
+Ruby 有兩個常用的特色你可能沒見過，那就是 "程式區塊(blocks)" 和迭代子(iterators)"。不像使用索引的迴圈(例如 C, C++ 和 pre-1.5 Java)，或是迴圈控制結構(例如 Perl 的 <tt>for (@a) {...}</tt>，或是 Python 的 <tt>for i in aList: ...</tt>)。在 Ruby 裡你會常常看到：
 
 <notextile><r:code>
 some_list.each do |this_item|
@@ -162,11 +162,11 @@ end
 
 h3. 函式存取權限
   
-在 Java 裡，<code>public</code> 表示函式可以被任何人呼叫。<code>protected</code> 表示只有這個類別的實例、衍生類別的實例，以及相同 package 類別的實例可以呼叫，而 <code>private</code> 表示除了這個類別的實例之外，除了都不行呼叫。
+在 Java 裡，<code>public</code> 表示函式可以被任何人呼叫。<code>protected</code> 表示只有這個類別的實例、衍生類別的實例，以及相同 package 類別的實例可以呼叫，而 <code>private</code> 表示除了這個類別的實例之外，其他都不行呼叫。
 
-Ruby 有一點不同，<code>public</code> 還是一樣是公開的意思。而 <code>private</code> 表示只有不指定接受者(receiver)時才可以呼叫。所以一個 private 函式的接受者一定是預設的 *self*。
+在 Ruby 中，<code>public</code> 還是一樣是公開的意思，其他則有一點差異。<code>private</code> 表示只有不指定接受者(receiver)時才可以呼叫，也就是只有 *self* 可以當成 private 方法的接受者。
 
-<code>protected</code> 要特別注意。一個 protected 函式除了可以被一個類別或衍生類別的實例呼叫，也可以讓另一個相同類別的實例來當做接受者。
+<code>protected</code> 也有點不同。一個 protected 函式除了可以被一個類別或衍生類別的實例呼叫，也可以讓另一個相同類別的實例來當做接受者。
  
 來看看 "Ruby FAQ":http://faq.rubygarden.org/entry/show/57?controller_prefix=faq%2F 的例子：
 
@@ -276,11 +276,11 @@ __ :a, :b, 10
 # arguments: a, b, 10
 </r:code></notextile>
 
-以上程式會輸出呼叫的細節，但是你隨意定義過這個訊息。
+以上程式會輸出呼叫的細節，但你可以隨意定義這個訊息。
 
 h3. 傳遞訊息，不是呼叫函數
 
-一個函式呼叫(method call)其實就是一個 *訊息(message)* 送給一個物件：
+一個函式呼叫(method call)其實就是送一個 *訊息(message)* 給一個物件：
 
 <notextile><r:code>
 # 這個
@@ -327,7 +327,7 @@ class Fixnum
 end
 </r:code></notextile>
   
-你不需要 C++ 的 <code>operator+</code> 等。
+你不需要 C++ 的 <code>operator+</code> 等等。
 
 甚至有如陣列存取的 <code>[]</code> 和 <code>[]=</code> 可以定義。要定義一元的 + and - (想想看 +1 跟 -2)，你必須分別定義 <code>+@</code> 和 <code>-@</code> 函式。
 
