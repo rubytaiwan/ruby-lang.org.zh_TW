@@ -52,7 +52,7 @@ irb(main):002:0> "george".object_id == "george".object_id
 irb(main):003:0>
 </r:code></notextile>
   
-<code>object_id</code> 函式會回傳物件的識別編號。如果有兩個物件有相同的  <code>object_id</code> 表示它們其實是同一個(指向同一個記憶體位置)。
+<code>object_id</code> 方法會回傳物件的識別編號。如果有兩個物件有相同的  <code>object_id</code> 表示它們其實是同一個(指向同一個記憶體位置)。
 
 如你所見，使用過 Symbols 之後，任何相同名字的 Symbol 都是指記憶體裡的同一個物件。對任何相同名字的 Symbols，它們的 <code>object_id</code> 都一樣。
 
@@ -84,7 +84,7 @@ h3. 命名慣例
 
 Ruby 規定了一些命名慣例。變數的識別名稱，大寫字母開頭的是常數、錢號($)開頭的是全域變數、<code>@</code> 開頭是實例變數(instance variable)、<code>@@</code> 開頭則是類別變數。
 
-函式名稱可以允許大寫字母開頭，雖然可能造成一些混淆，例如：
+方法名稱可以允許大寫字母開頭，雖然可能造成一些混淆，例如：
 
 <notextile><r:code>
 Constant = 10
@@ -97,7 +97,7 @@ end
 
 h3. 虛擬關鍵字參數
 
-Ruby 不像 Python 有關鍵字參數(keyword parameters)功能，但是可以用 symbols 和雜湊(hash) 來替代。Ruby on Rails 和非常多的函式庫都使用了這個方法，例如：
+Ruby 不像 Python 有關鍵字參數(keyword parameters)功能，但是可以用 symbols 和雜湊(hash) 來替代。Ruby on Rails 和非常多的方法庫都使用了這個方法，例如：
   
 <notextile><r:code>
 def some_keyword_params( params )
@@ -144,7 +144,7 @@ class MyClass
 end
 </r:code></notextile>
   
-你可能會認為 <code>another_method</code> 是 public 的，但不是這樣。這個 'private' 存取修飾到作用域(scope)結束，或是直到另一個存取修飾詞開始作用。函式預設都是 public 的：
+你可能會認為 <code>another_method</code> 是 public 的，但不是這樣。這個 'private' 存取修飾到作用域(scope)結束，或是直到另一個存取修飾詞開始作用。方法預設都是 public 的：
 
 <notextile><r:code>
 class MyClass
@@ -158,15 +158,15 @@ class MyClass
 end
 </r:code></notextile>
   
-<code>public</code>, <code>private</code> 和 <code>protected</code> 其實也是一種函式，所以可以接受參數。如果你傳入一個 Symbol，那個該 Symbol 代表的函式就會改變存取權限。
+<code>public</code>, <code>private</code> 和 <code>protected</code> 其實也是一種方法，所以可以接受參數。如果你傳入一個 Symbol，那個該 Symbol 代表的方法就會改變存取權限。
 
-h3. 函式存取權限
+h3. 方法存取權限
   
-在 Java 裡，<code>public</code> 表示函式可以被任何人呼叫。<code>protected</code> 表示只有這個類別的實例、衍生類別的實例，以及相同 package 類別的實例可以呼叫，而 <code>private</code> 表示除了這個類別的實例之外，其他都不行呼叫。
+在 Java 裡，<code>public</code> 表示方法可以被任何人呼叫。<code>protected</code> 表示只有這個類別的實例、衍生類別的實例，以及相同 package 類別的實例可以呼叫，而 <code>private</code> 表示除了這個類別的實例之外，其他都不行呼叫。
 
 在 Ruby 中，<code>public</code> 還是一樣是公開的意思，其他則有一點差異。<code>private</code> 表示只有不指定接受者(receiver)時才可以呼叫，也就是只有 *self* 可以當成 private 方法的接受者。
 
-<code>protected</code> 也有點不同。一個 protected 函式除了可以被一個類別或衍生類別的實例呼叫，也可以讓另一個相同類別的實例來當做接受者。
+<code>protected</code> 也有點不同。一個 protected 方法除了可以被一個類別或衍生類別的實例呼叫，也可以讓另一個相同類別的實例來當做接受者。
  
 來看看 "Ruby FAQ":http://faq.rubygarden.org/entry/show/57?controller_prefix=faq%2F 的例子：
 
@@ -213,7 +213,7 @@ irb(main):026:0>
 
 h3. 類別是開放的
   
-Ruby 的類別是開放的，你可以隨時打開它新增一點程式或是修改。即使是核心類別如 <code>Fixnum</code> 或是 <code>Object</code>(這是所有類別的父類別) 都一樣。 Ruby on Rails 甚至定義了一堆時間函式到 <code>Fixnum</code> 去，例如：
+Ruby 的類別是開放的，你可以隨時打開它新增一點程式或是修改。即使是核心類別如 <code>Fixnum</code> 或是 <code>Object</code>(這是所有類別的父類別) 都一樣。 Ruby on Rails 甚至定義了一堆時間方法到 <code>Fixnum</code> 去，例如：
  
 <notextile><r:code>
 class Fixnum
@@ -228,15 +228,15 @@ end
 Time.mktime(2006, 01, 01) + 14.hours # => Sun Jan 01 14:00:00
 </r:code></notextile>
 
-h3. 有趣的函式名稱
+h3. 有趣的方法名稱
 
-在 Ruby 裡，函式名稱允許用問號或驚嘆號結尾。慣例上，用來回答是非題的函式會用問號結尾 (例如 <tt>Array#empty?</tt> 會回傳 *true* 如果函式接收者是空的)。有潛在 "危險" (表示有某種副作用，會修改 *self* 或參數值。例如 <code>exit!</code> 等) 的函式會用驚嘆號結尾。
+在 Ruby 裡，方法名稱允許用問號或驚嘆號結尾。慣例上，用來回答是非題的方法會用問號結尾 (例如 <tt>Array#empty?</tt> 會回傳 *true* 如果方法接收者是空的)。有潛在 "危險" (表示有某種副作用，會修改 *self* 或參數值。例如 <code>exit!</code> 等) 的方法會用驚嘆號結尾。
   
-但是這不表示所有會修改參數的函式一定有驚嘆號結尾，例如 <tt>Array#replace</tt> 就會替換內容成別的陣列，畢竟 replace 的意思就是要修改替換自己。
+但是這不表示所有會修改參數的方法一定有驚嘆號結尾，例如 <tt>Array#replace</tt> 就會替換內容成別的陣列，畢竟 replace 的意思就是要修改替換自己。
 
-h3. 單件函式
+h3. 單件方法
 
-單件函式(Singleton methods)是個別物件才有的函式。它們只存在於你要定義的物件之中。
+單件方法(Singleton methods)是個別物件才有的方法。它們只存在於你要定義的物件之中。
   
 <notextile><r:code>
 class Car
@@ -259,12 +259,12 @@ other_car.inspect # => Cheap car
 </r:code></notextile>
 
 
-h3. Missing 函式
+h3. Missing 方法
 
-當你呼叫一個不存在的函式，Ruby 仍然有辦法處理。它會改呼叫 <code>method_missing</code> 這個函式，並把這個不存在的函式名稱傳進去當做參數。method_missing 預設會丟出一個 NameError 例外，但是你可以根據你的需求重新定義過，也有許多函式庫這麼做。這是一個例子：
+當你呼叫一個不存在的方法，Ruby 仍然有辦法處理。它會改呼叫 <code>method_missing</code> 這個方法，並把這個不存在的方法名稱傳進去當做參數。method_missing 預設會丟出一個 NameError 例外，但是你可以根據你的需求重新定義過，也有許多方法庫這麼做。這是一個例子：
  
 <notextile><r:code>
-# id 是被呼叫函式的名字，而 * 符號會收集
+# id 是被呼叫方法的名字，而 * 符號會收集
 # 所有傳進來的參數變成一個叫做 'arguments' 的陣列
 def method_missing( id, *arguments )
   puts "Method #{id} was called, but not found. It has " + 
@@ -280,7 +280,7 @@ __ :a, :b, 10
 
 h3. 傳遞訊息，不是呼叫函數
 
-一個函式呼叫(method call)其實就是送一個 *訊息(message)* 給一個物件：
+一個方法呼叫(method call)其實就是送一個 *訊息(message)* 給一個物件：
 
 <notextile><r:code>
 # 這個
@@ -293,7 +293,7 @@ h3. 傳遞訊息，不是呼叫函數
 
 h3. Blocks 也算是物件
 
-程式區塊 Blocks (或叫做 closures) 被廣泛應用在標準函式庫。要執行一個程式區塊，可以用  @yield@ ，或是透過一個特別的參數讓它變成 @Proc@，例如：
+程式區塊 Blocks (或叫做 closures) 被廣泛應用在標準方法庫。要執行一個程式區塊，可以用  @yield@ ，或是透過一個特別的參數讓它變成 @Proc@，例如：
 
 <notextile><r:code>
 def block( &the_block )
@@ -305,9 +305,9 @@ adder = block { |a, b| a + b }
 adder.class # => Proc
 </r:code></notextile>
 
-你也可以透過 Proc.new 或 lambda 在函式外建立程式區塊。
+你也可以透過 Proc.new 或 lambda 在方法外建立程式區塊。
 
-同樣的，函式也可以當做物件：
+同樣的，方法也可以當做物件：
 
 <notextile><r:code>
 method(:puts).call "puts is an object!"
@@ -316,7 +316,7 @@ method(:puts).call "puts is an object!"
 
 h3. 操作符只是語法包裝
 
-大部分的 Ruby 操作符(operators)只是一種函式呼叫的語法包裝(syntactic sugar)，加上一些優先權規則。你要的話，舉例來說，我們可以覆寫掉 Fixnum 的 + 函式：
+大部分的 Ruby 操作符(operators)只是一種方法呼叫的語法包裝(syntactic sugar)，加上一些優先權規則。你要的話，舉例來說，我們可以覆寫掉 Fixnum 的 + 方法：
   
 <notextile><r:code>
 class Fixnum
@@ -329,9 +329,9 @@ end
   
 你不需要 C++ 的 <code>operator+</code> 等等。
 
-甚至有如陣列存取的 <code>[]</code> 和 <code>[]=</code> 可以定義。要定義一元的 + and - (想想看 +1 跟 -2)，你必須分別定義 <code>+@</code> 和 <code>-@</code> 函式。
+甚至有如陣列存取的 <code>[]</code> 和 <code>[]=</code> 可以定義。要定義一元的 + and - (想想看 +1 跟 -2)，你必須分別定義 <code>+@</code> 和 <code>-@</code> 方法。
 
-以下的操作符則*不是*語法包裝。它們不是函式，不能被覆寫定義：
+以下的操作符則*不是*語法包裝。它們不是方法，不能被覆寫定義：
 
 <notextile><r:code lang="symbols">  
 =, .., ..., !, not, &&, and, ||, or, !=, !~, ::

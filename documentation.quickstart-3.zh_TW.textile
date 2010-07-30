@@ -26,7 +26,7 @@ h2. 揭開物件的面紗
 
 物件中的實例變數(Instance variables)是隱藏的。雖然可以透過檢查(inspect)物件看到這個變數，不過 Ruby 採用了物件導向的思維(譯註: 即封裝)，內部屬性資料基本上是隱藏起來的。
 
-到底 Greeter 物件有哪些函式呢?
+到底 Greeter 物件有哪些方法呢?
 
 <notextile><r:code>
 irb(main):039:0> Greeter.instance_methods
@@ -42,14 +42,14 @@ irb(main):039:0> Greeter.instance_methods
     "instance_variables", "instance_of?"]
 </r:code></notextile>
 
-哇。有這麼多。我們不是只定義了兩個函式，怎麼回事呢? 這裡列出的是*所有* Greeter 物件的函式，因此也包括了它所繼承的類別的函式。如果我們只需要 Greeter 自己的函式，可以傳入一個 *false* 參數，表示我們不希望包括父類別的函式。
+哇。有這麼多。我們不是只定義了兩個方法，怎麼回事呢? 這裡列出的是*所有* Greeter 物件的方法，因此也包括了它所繼承的類別的方法。如果我們只需要 Greeter 自己的方法，可以傳入一個 *false* 參數，表示我們不希望包括父類別的方法。
 
 <notextile><r:code>
 irb(main):040:0> Greeter.instance_methods(false)
 => ["say_bye", "say_hi"]
 </r:code></notextile>
 
-看起來好多了。讓我們看看 greeter 物件對哪些函式有反應?
+看起來好多了。讓我們看看 greeter 物件對哪些方法有反應?
 
 <notextile><r:code>
 irb(main):041:0> g.respond_to?("name")
@@ -60,7 +60,7 @@ irb(main):043:0> g.respond_to?("to_s")
 => true
 </r:code></notextile>
 
-它知道 @say_hi@ 和 @to_s@ (意思是轉換成字串，這是每個物件都有的函式)，但是不知道 @name@ 這個函式。
+它知道 @say_hi@ 和 @to_s@ (意思是轉換成字串，這是每個物件都有的方法)，但是不知道 @name@ 這個方法。
 
 h2. 變更類別，永不嫌晚
 
@@ -96,7 +96,7 @@ Hi Betty!
 => nil
 </r:code></notextile>
 
-@attr_accessor@ 會定義兩個新的函式，@name@ 用來取值，而 @name=@ 用來給值。
+@attr_accessor@ 會定義兩個新的方法，@name@ 用來取值，而 @name=@ 用來給值。
 
 h2. 可以歡迎任何東西的 MegaGreeter!
 
