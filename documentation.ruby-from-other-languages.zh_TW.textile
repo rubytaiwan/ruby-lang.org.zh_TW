@@ -74,7 +74,7 @@ MyClass = Class.new do
 end
 </r:code></notextile>
 
-譯著：任何類別都是 <code>Class</code> 類別所產生(new)出來的物件。
+譯註：在 Ruby 中任何類別都是由 <code>Class</code> 類別所實例(new)出來的物件。
 
 h3. 可變的常數
 
