@@ -97,7 +97,7 @@ end
 
 h3. 虛擬關鍵字參數
 
-Ruby 不像 Python 有關鍵字參數(keyword parameters)功能，但是可以用 symbols 和雜湊(hash) 來替代。Ruby on Rails 和非常多的方法庫都使用了這個方法，例如：
+Ruby 不像 Python 有關鍵字參數(keyword parameters)功能，但是可以用 symbols 和雜湊(hash) 來替代。Ruby on Rails 和非常多的函式庫都使用了這個方法，例如：
   
 <notextile><r:code>
 def some_keyword_params( params )
@@ -261,7 +261,7 @@ other_car.inspect # => Cheap car
 
 h3. Missing 方法
 
-當你呼叫一個不存在的方法，Ruby 仍然有辦法處理。它會改呼叫 <code>method_missing</code> 這個方法，並把這個不存在的方法名稱傳進去當做參數。method_missing 預設會丟出一個 NameError 例外，但是你可以根據你的需求重新定義過，也有許多方法庫這麼做。這是一個例子：
+當你呼叫一個不存在的方法，Ruby 仍然有辦法處理。它會改呼叫 <code>method_missing</code> 這個方法，並把這個不存在的方法名稱傳進去當做參數。method_missing 預設會丟出一個 NameError 例外，但是你可以根據你的需求重新定義過，也有許多函式庫這麼做。這是一個例子：
  
 <notextile><r:code>
 # id 是被呼叫方法的名字，而 * 符號會收集
@@ -293,7 +293,7 @@ h3. 傳遞訊息，不是呼叫函數
 
 h3. Blocks 也算是物件
 
-程式區塊 Blocks (或叫做 closures) 被廣泛應用在標準方法庫。要執行一個程式區塊，可以用  @yield@ ，或是透過一個特別的參數讓它變成 @Proc@，例如：
+程式區塊 Blocks (或叫做 closures) 被廣泛應用在標準函式庫。要執行一個程式區塊，可以用  @yield@ ，或是透過一個特別的參數讓它變成 @Proc@，例如：
 
 <notextile><r:code>
 def block( &the_block )
