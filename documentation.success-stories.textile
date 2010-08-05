@@ -1,42 +1,43 @@
-Many people use Ruby in their daily jobs. Others just as a hobby. Here you'll find a small sample of real world usage of Ruby.
+不只是業餘愛好者, 有許多人在他們的日常工作中使用了 Ruby. 在此你將會看到世上使用 Ruby 的一些真實例子.
+
+h4. 模擬
+
+* "NASA Langley 研究中心":http://www.larc.nasa.gov/ 使用 Ruby 來操作模擬.
 
 
-h4. Simulations
+* "Motorola":http://www.motorola.com 的研究團隊使用 Ruby 來操作模擬器,用來產生情境(scenarios)與後續處理資料.
 
-* "NASA Langley Research Center":http://www.larc.nasa.gov/ uses Ruby to conduct simulations.
+h4. 3D 模型建造
 
-* A research group in "Motorola":http://www.motorola.com uses Ruby to script a simulator, both to generate scenarios and to post process the data.
+* "Google SketchUp":http://www.sketchup.com/ 是一個 3D 模型建造的應用程式, 並使用 Ruby 當成的他的巨集腳本  API.
 
-h4. 3D Modeling
+h4. 商業應用
 
-* "Google SketchUp":http://www.sketchup.com/ is a 3D modeling application that uses Ruby for its macro scripting API.
+* "Toronto Rehab":http://www.torontorehab.on.ca/ 使用基於 RubyWebDialogs 的應用程式來管理並追蹤資訊服務中心與資訊運作中心的電話支援服務以及客戶端支援服務.
 
-h4. Business
 
-* "Toronto Rehab":http://www.torontorehab.on.ca/ uses a RubyWebDialogs based app to manage and track on-call and on-site support for the IT help desk and IT operations teams.
+h4. 機器人
 
-h4. Robotics
+* 在 "MORPHA":http://www.morpha.de/php_e/ 計畫中, 使用 Ruby 來實作西門子公司服務型機器人的反應控制部份.
 
-* At "MORPHA":http://www.morpha.de/php_e/ project, Ruby was used to implemented the reactive control part for the Siemens service robot.
+h4. 網路
 
-h4. Networking
+* "Open Domain Server":http://ods.org/ 使用 Ruby 讓使用者可以使用動態 DNS 客戶端及時的更新 IP  設定以便對應到靜態網域設定.
 
-* "Open Domain Server":http://ods.org/ uses Ruby to allow people using Dynamic DNS clients to update in real time their IP configuration so that it can be mapped to static domains.
+h4. 電信
 
-h4. Telephony
+* Ruby 也被用在 "Lucent":http://www.lucent.com/ 3G無線電信產品中.
 
-* Ruby is being used within "Lucent":http://www.lucent.com/ on a 3G wireless telephony product.
+h4. 系統管理
 
-h4. System Administration
+* "Level 3 Communications":http://www.level3.com/ 的 Unix 產能規劃系統也使用 Ruby 來撰寫中央資料收集部分, 用來收集分佈各地超過 1700 台 Unix 機器 (Solaris and Linux) 的效能統計資料.
 
-* Ruby was used to write the central data collection portion of "Level 3 Communications":http://www.level3.com/ Unix Capacity and Planning system that gathers performance statistics from over 1700 Unix (Solaris and Linux) servers scattered around the globe.
+h4. 網頁應用程式
 
-h4. Web Applications
+* "Basecamp":http://www.basecamphq.com, 由 "37signals":http://www.37signals.com 公司完全以 Ruby 所撰寫的網頁專案管理系統.
 
-* "Basecamp":http://www.basecamphq.com, a web-based project management application developed by "37signals":http://www.37signals.com, is programmed entirely in Ruby.
+* "43 Things":http://www.43things.com 可讓你保存43個想要達成的目標清單並與世界分享. 他也是完全以 Ruby 所撰寫而成.
 
-* "43 Things":http://www.43things.com allows you to keep a list of goals and share it with the world. It was developed entirely in Ruby.
+* "A List Apart":http://www.alistapart.com, 從 1997 年就開始發行的一個針對網站製作者的雜誌. 最近改版使用 Ruby on Rails 所客製化而成的程式.
 
-* "A List Apart":http://www.alistapart.com, a magazine for people who make websites that has been around since 1997, has recently been revamped and uses a custom application built with Ruby on Rails.
-
-* "Blue Sequence":http://www.bluefountain.com/casestudies/bfs-deliver-a-2nd-sequence-production-system-for-toyota/, a sophisticated mission-critical application which forms part of Toyota Motor Manufacturing's own "sequence-in-time" production process, has recently been selected as finalist the British Computer (BCS) Information Management Awards.
+* "Blue Sequence":http://www.bluefountain.com/casestudies/bfs-deliver-a-2nd-sequence-production-system-for-toyota/, Toyota 汽車 "sequence-in-time" 生產流程中的一個先進的關鍵性任務應用 (mission-critical application) , 最近被選入 BCS 資訊管理獎的決選名單.
