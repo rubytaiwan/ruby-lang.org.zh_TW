@@ -11,7 +11,7 @@ Bye Pat, come back soon.
 => nil
 </r:code></notextile>
 
-一旦建立了  @g@ 物件，它就會記得它的名字是 Pay。嗯，但是我們如何拿到這個名字的值呢?
+一旦建立了  @g@ 物件，它就會記得它的名字是 Pat。嗯，但是我們如何拿到這個名字的值呢?
 
 <notextile><r:code>
 irb(main):038:0> g.@name
